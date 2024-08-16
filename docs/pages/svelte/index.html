@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="./client/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style>
+		html {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-items: flex-start;
+			background-color: #313131;
+			color: #fff2e1;
+			width: 100%;
+			height: 100%;
+		}
+
+
+		.detail {
+			width: 2px;
+			height: 2px;
+			margin: 10px;
+			display: inline-block;
+		}
+	</style>
+	<!-- Reusable radar data -->
+	<style>
+		.radarContainer {
+			width: 100px;
+		}
+
+		.radar {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background: rgba(0, 255, 0, 0.1);
+			overflow: hidden;
+		}
+
+		.radar .circle {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			border: 1px solid rgba(0, 255, 0, 0.5);
+			animation: radar-pulse 2s infinite;
+		}
+
+		@keyframes radar-pulse {
+			0% {
+				transform: scale(0.5);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 0;
+			}
+		}
+
+		.radar .line {
+			position: absolute;
+			width: 2px;
+			left: 50px;
+			height: 100%;
+			background: rgba(0, 255, 0, 0.7);
+			transform-origin: center;
+			animation: radar-sweep 2s infinite linear;
+		}
+
+		@keyframes radar-sweep {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	
+		<link href="./client/_app/immutable/assets/2.Bw_TYMKG.css" rel="stylesheet">
+		<link rel="modulepreload" href="./client/_app/immutable/entry/start.BovDxGnU.js">
+		<link rel="modulepreload" href="./client/_app/immutable/chunks/scheduler.Cjckziim.js">
+		<link rel="modulepreload" href="./client/_app/immutable/chunks/singletons.BooCY_V0.js">
+		<link rel="modulepreload" href="./client/_app/immutable/chunks/index.G1ViZ3sc.js">
+		<link rel="modulepreload" href="./client/_app/immutable/entry/app.CzNR1QRV.js">
+		<link rel="modulepreload" href="./client/_app/immutable/chunks/index.DlyaG3Jw.js">
+		<link rel="modulepreload" href="./client/_app/immutable/nodes/0.DXkKFOqm.js">
+		<link rel="modulepreload" href="./client/_app/immutable/nodes/2.DMNX4WvP.js">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+
+	<div class="radarContainer">
+		<div class="radar">
+			<div class="circle"></div>
+			<div class="line"></div>
+		</div>
+	</div>
+	<div style="display: contents">  <div><div class="input svelte-rjhedi"><label>Details Amount:
+      <input type="number" value="0"></label> <span>Last update: n/a</span> <br> <label>Interactive input:
+      <input type="text" value=""> <span>Result: </span></label> <br> <button data-svelte-h="svelte-199rmhv">Start auto increment</button> <button data-svelte-h="svelte-1rdutwn">Stop auto increment</button></div> <div class="details svelte-rjhedi"></div> </div> 
+			
+			<script>
+				{
+					__sveltekit_1abipqo = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./client/_app/immutable/entry/start.BovDxGnU.js"),
+						import("./client/_app/immutable/entry/app.CzNR1QRV.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+
+</html>

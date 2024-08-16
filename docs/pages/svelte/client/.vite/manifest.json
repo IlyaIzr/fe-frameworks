@@ -1,0 +1,81 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js"
+    ],
+    "file": "_app/immutable/entry/app.CzNR1QRV.js",
+    "imports": [
+      "_scheduler.Cjckziim.js",
+      "_index.DlyaG3Jw.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/app.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.DXkKFOqm.js",
+    "imports": [
+      "_scheduler.Cjckziim.js",
+      "_index.DlyaG3Jw.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.5hIQgyNW.js",
+    "imports": [
+      "_scheduler.Cjckziim.js",
+      "_index.DlyaG3Jw.js",
+      "_singletons.BooCY_V0.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js"
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "css": [
+      "_app/immutable/assets/2.Bw_TYMKG.css"
+    ],
+    "file": "_app/immutable/nodes/2.DMNX4WvP.js",
+    "imports": [
+      "_scheduler.Cjckziim.js",
+      "_index.DlyaG3Jw.js",
+      "_index.G1ViZ3sc.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js"
+  },
+  "_index.DlyaG3Jw.js": {
+    "file": "_app/immutable/chunks/index.DlyaG3Jw.js",
+    "imports": [
+      "_scheduler.Cjckziim.js"
+    ]
+  },
+  "_index.G1ViZ3sc.js": {
+    "file": "_app/immutable/chunks/index.G1ViZ3sc.js",
+    "imports": [
+      "_scheduler.Cjckziim.js"
+    ]
+  },
+  "_scheduler.Cjckziim.js": {
+    "file": "_app/immutable/chunks/scheduler.Cjckziim.js"
+  },
+  "_singletons.BooCY_V0.js": {
+    "file": "_app/immutable/chunks/singletons.BooCY_V0.js",
+    "imports": [
+      "_index.G1ViZ3sc.js"
+    ]
+  },
+  "node_modules/.pnpm/@sveltejs+kit@2.0.0_@sveltejs+vite-plugin-svelte@3.0.0_svelte@4.2.7_vite@5.0.3/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/entry/start.BovDxGnU.js",
+    "imports": [
+      "_scheduler.Cjckziim.js",
+      "_singletons.BooCY_V0.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.0.0_@sveltejs+vite-plugin-svelte@3.0.0_svelte@4.2.7_vite@5.0.3/node_modules/@sveltejs/kit/src/runtime/client/start.js"
+  }
+}
