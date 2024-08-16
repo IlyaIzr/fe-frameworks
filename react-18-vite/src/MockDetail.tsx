@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 interface MockDetailProps {
     index: number;
@@ -25,11 +25,16 @@ const getRandomColor = () => {
 
 const MockDetail: React.FC<MockDetailProps> = ({ index }) => {
     const [isVisible, setIsVisible] = useState(true);
+    const [clicked, setClicked] = useState(0);
     const randomString = getRandomString(5);
-    const title = `${randomString}. Index: ${index}`;
+    const title = `${randomString}. Index: ${index}. Clicked ${clicked}`;
     const TagName = Math.random() > 0.5 ? 'div' : 'span';
     const backgroundColor = getRandomColor();
-    const renderChild = Math.random() < 0.2;
+    const renderChild = useMemo(() => Math.random() < 0.2, []);
+
+    function onSingleClick() {
+        setClicked(click => click + 1)
+    }
 
     if (!isVisible) return null;
 
@@ -44,6 +49,7 @@ const MockDetail: React.FC<MockDetailProps> = ({ index }) => {
                 display: 'inline-block',
             }}
             onDoubleClick={() => setIsVisible(false)}
+            onClick={onSingleClick}
         >
             {renderChild && <div>{title}</div>}
         </TagName>
