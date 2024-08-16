@@ -4,6 +4,7 @@ import "./App.css";
 
 const App: React.FC = () => {
   const [detailsAmount, setDetailsAmount] = useState<number>(0);
+  const [intervalRef, setIntervalRef] = useState(0);
   const [lastUpdateTime, setLastUpdateTime] = useState<string | Date | null>(null);
   const [userString, setUserString] = useState("");
   const startTimeRef = useRef<number | null>(null);
@@ -15,8 +16,18 @@ const App: React.FC = () => {
 
   function onStringInput(e: any) {
     setUserString(e.target.value);
-
     startTimeRef.current = performance.now();
+  }
+
+  function startIncrement() {
+    const i = setInterval(() => {
+      setDetailsAmount((a) => a + 1);
+    }, 1000);
+    setIntervalRef(i);
+  }
+
+  function stopIncrement() {
+    clearInterval(intervalRef);
   }
 
   useEffect(() => {
@@ -44,6 +55,13 @@ const App: React.FC = () => {
           <input type="string" id="stringInput" value={userString} onChange={onStringInput} />
           <span>Result: {userString}</span>
         </label>
+        <br />
+        <button type="button" onClick={startIncrement}>
+          Start auto increment
+        </button>
+        <button type="button" onClick={stopIncrement}>
+          Stop auto increment
+        </button>
       </div>
       <div className="details">
         {Array.from({ length: detailsAmount }, (_, index) => (

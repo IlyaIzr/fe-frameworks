@@ -12,6 +12,9 @@
         <input type="text" id="stringInput" v-model="userString" />
         <span>Result: {{ userString }}</span>
       </label>
+      <br />
+      <button type="button" @click="startIncrement">Start auto increment</button>
+      <button type="button" @click="stopIncrement">Stop auto increment</button>
     </div>
 
     <div class="details">
@@ -28,6 +31,17 @@ const detailsAmount = ref(0);
 const lastUpdateTime = ref<string | null>(null);
 const userString = ref("");
 const startTimeRef = ref<number | null>(null);
+const interval = ref(0);
+
+function startIncrement() {
+  interval.value = setInterval(() => {
+    detailsAmount.value++;
+  }, 1000);
+}
+
+function stopIncrement() {
+  clearInterval(interval.value);
+}
 
 watch([detailsAmount, userString], async () => {
   startTimeRef.value = performance.now();
@@ -64,6 +78,12 @@ body {
   overflow: auto;
   font-size: 4px;
   cursor: pointer;
+}
+.detail {
+  width: 2px;
+  height: 2px;
+  margin: 10px;
+  display: inline-block;
 }
 
 /* Add any additional styling here */

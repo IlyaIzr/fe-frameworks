@@ -22,6 +22,7 @@ In this build i want to compare builds of different FE frameworks to see how the
   - Random background color
   - A 20% chance of rendering child component that would show the random string, index and click times as described earlier
   - It should disappear from DOM on double click
-- An input that allows user to just type in some text and renders the result of it right after to show responsibility
+- An input that allows user to just type in some text and renders the result of it right after to show responsivness
+- A button "start incrementing" that starts to increment amount of MockDetails by 1 each second
 - If possible - app should display time passed from before update of MockDetails started to it's finish
 - Using pure js css and html all apps should render the same 'radar' animation at any time

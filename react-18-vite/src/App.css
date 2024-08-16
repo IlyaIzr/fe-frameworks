@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 .input{
-  height: 40px;
+  height: 80px;
   width: 100%;
 }
 .details {
@@ -24,4 +24,11 @@ body {
   overflow: auto;
   font-size: 4px;
   cursor: pointer;
+}
+
+.detail {
+  width: 2px;
+  height: 2px;
+  margin: 10px;
+  display: inline-block;
 }
