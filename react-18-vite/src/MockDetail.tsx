@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 
 interface MockDetailProps {
   index: number;
@@ -26,15 +26,15 @@ const getRandomColor = () => {
 const MockDetail: React.FC<MockDetailProps> = ({ index }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [clicked, setClicked] = useState(0);
-  const randomString = getRandomString(5);
-  const title = `${randomString}. Index: ${index}. Clicked ${clicked}`;
-  const TagName = Math.random() > 0.5 ? "div" : "span";
-  const backgroundColor = getRandomColor();
+  const randomString = useMemo(() => getRandomString(5), []);
+  const title = useMemo(() => `${randomString}. Index: ${index}. Clicked ${clicked}`, [clicked, randomString, index]);
+  const TagName = useMemo(() => (Math.random() > 0.5 ? "div" : "span"), []);
+  const backgroundColor = useMemo(() => getRandomColor(), []);
   const renderChild = useMemo(() => Math.random() < 0.2, []);
 
-  function onSingleClick() {
-    setClicked((click) => click + 1);
-  }
+  const onSingleClick = useCallback(() => {
+    setClicked((prev) => prev + 1);
+  }, []);
 
   if (!isVisible) return null;
 
@@ -53,4 +53,5 @@ const MockDetail: React.FC<MockDetailProps> = ({ index }) => {
   );
 };
 
-export default MockDetail;
+const MockDetailMemo = React.memo(MockDetail);
+export { MockDetailMemo };
