@@ -26,3 +26,12 @@ In this build i want to compare builds of different FE frameworks to see how the
 - A button "start incrementing" that starts to increment amount of MockDetails by 1 each second
 - If possible - app should display time passed from before update of MockDetails started to it's finish
 - Using pure js css and html all apps should render the same 'radar' animation at any time
+
+## TODOs
+
+Neareast planned:
+- Angular example
+- Solid example
+- Ember example
+- Qwik example
+- Improve code readability and cleanup
