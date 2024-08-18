@@ -67,7 +67,7 @@ body {
   height: 100%;
 }
 .input {
-  height: 40px;
+  height: 80px;
   width: 100%;
 }
 .details {
