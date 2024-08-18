@@ -1,0 +1,21 @@
+<div class="input">
+  <label for="input">
+    Details Amount:
+    <input type="number" id="input" [value]="detailsAmount" (input)="handleChange($event)" />
+  </label>
+  <span>Last update: {{ lastUpdateTime || 'n/a' }}</span>
+  <br />
+
+  <label for="stringInput">
+    Interactive input:
+    <input type="text" id="stringInput" [value]="userString" (input)="onStringInput($event)" />
+    <span>Result: {{ userString }}</span>
+  </label>
+  <br />
+  <button type="button" (click)="startIncrement()">Start auto increment</button>
+  <button type="button" (click)="stopIncrement()">Stop auto increment</button>
+</div>
+
+<div class="details">
+  <app-mock-detail *ngFor="let index of [].constructor(detailsAmount); let i = index" [index]="i"></app-mock-detail>
+</div>

@@ -1,0 +1,19 @@
+<ng-container *ngIf="isVisible">
+  <div *ngIf="tagName === 'div'" 
+       [title]="title"
+       [style.background-color]="backgroundColor"
+       class="detail"
+       (click)="onSingleClick()"
+       (dblclick)="onDoubleClick()">
+    <div *ngIf="renderChild">{{ title }}</div>
+  </div>
+
+  <span *ngIf="tagName === 'span'" 
+        [title]="title"
+        [style.background-color]="backgroundColor"
+        class="detail"
+        (click)="onSingleClick()"
+        (dblclick)="onDoubleClick()">
+    <div *ngIf="renderChild">{{ title }}</div>
+  </span>
+</ng-container>

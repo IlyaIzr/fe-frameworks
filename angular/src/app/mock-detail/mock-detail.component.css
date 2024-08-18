@@ -1,0 +1,7 @@
+.detail {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  margin: 10px;
+  cursor: pointer;
+}
