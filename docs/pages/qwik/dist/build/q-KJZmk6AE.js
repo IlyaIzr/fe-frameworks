@@ -1,0 +1,1 @@
+import{c as e,q as t,_ as r}from"./q-R2UFIG3E.js";const i=e(t(()=>r(()=>import("./q-VeJGSjvV.js"),[],import.meta.url),"s_B0lqk5IDDy4")),a={title:"Checking Qwik perfomance",meta:[{name:"description",content:"Here me, @ilyaizr just checking the performance of Qwik framework"}]};export{i as default,a as head};

@@ -62,7 +62,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
     //   outDir: '../docs/pages/qwik',
     //   emptyOutDir: true
     // },
-    // base: './'
+    base: './'
   };
 });
 

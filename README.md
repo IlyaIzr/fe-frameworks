@@ -33,6 +33,5 @@ Neareast planned:
 
 - Solid example
 - Ember example
-- Qwik example
 - Improve code readability and cleanup
 - Check and fix time to update for different builds

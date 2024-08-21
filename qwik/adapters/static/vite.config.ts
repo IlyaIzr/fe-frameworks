@@ -13,10 +13,10 @@ export default extendConfig(baseConfig, () => {
       // outDir: '../../../docs/pages/qwik',
       // emptyOutDir: true
     },    
-    // base: './',
+    base: './',
     plugins: [
       staticAdapter({
-        origin: "https://ilyaizr.github.io/fe-frameworks",
+        origin: "https://ilyaizr.github.io/fe-frameworks/pages/qwik/dist",
       }),
     ],
   };
