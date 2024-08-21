@@ -9,14 +9,10 @@ export default extendConfig(baseConfig, () => {
       rollupOptions: {
         input: ["@qwik-city-plan"],
       },
-      
-      // outDir: '../../../docs/pages/qwik',
-      // emptyOutDir: true
-    },    
-    base: './',
+    },
     plugins: [
       staticAdapter({
-        origin: "https://ilyaizr.github.io/fe-frameworks/pages/qwik/dist",
+        origin: "https://ilyaizr.github.io",
       }),
     ],
   };
