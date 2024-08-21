@@ -1,10 +1,10 @@
 # fe-frameworks
 
-Let's build a same app with different FE frameworks to test their load and user interaction
+Let's build a same app with different FE frameworks to test their load and user interaction under load
 
 ## Approach
 
-In this build i want to compare builds of different FE frameworks to see how they handle a mock of a real life app.
+I want to compare builds of different FE frameworks to see how they handle a mock of a real life app
 
 ### App requirements
 
@@ -30,8 +30,9 @@ In this build i want to compare builds of different FE frameworks to see how the
 ## TODOs
 
 Neareast planned:
-- Angular example
+
 - Solid example
 - Ember example
 - Qwik example
 - Improve code readability and cleanup
+- Check and fix time to update for different builds
